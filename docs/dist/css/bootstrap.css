@@ -1164,7 +1164,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #20a0ff;
+  color: var(#1f2d3d);
   background-color: #fff;
 }
 input,
@@ -2987,7 +2987,7 @@ select[multiple].input-lg {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #a0d6ff;
+  color: #4a6b92;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -3082,9 +3082,9 @@ select[multiple].input-lg {
   white-space: nowrap;
   cursor: pointer;
   background: #ffffff;
-  border: 1px solid #20a0ff;
+  border: 1px solid #1f2d3d;
   border-color: #c4c4c4;
-  color: #20a0ff;
+  color: #1f2d3d;
   -webkit-appearance: none;
   text-align: center;
   box-sizing: border-box;
@@ -3119,11 +3119,11 @@ select[multiple].input-lg {
 .btn.disabled,
 .btn[disabled],
 fieldset[disabled] .btn {
-  color: #20a0ff;
+  color: #1f2d3d;
   cursor: not-allowed;
   background-image: none;
-  background-color: #20a0ff;
-  border-color: var(#20a0ff);
+  background-color: #1f2d3d;
+  border-color: var(#1f2d3d);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -3450,7 +3450,7 @@ fieldset[disabled] .btn-link {
 fieldset[disabled] .btn-link:hover,
 .btn-link[disabled]:focus,
 fieldset[disabled] .btn-link:focus {
-  color: #20a0ff;
+  color: #1f2d3d;
   text-decoration: none;
 }
 .btn-block {
@@ -5016,7 +5016,7 @@ a.thumbnail.active {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #20a0ff;
+  color: #1f2d3d;
 }
 .alert {
   padding: 15px;

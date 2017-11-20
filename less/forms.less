@@ -112,17 +112,22 @@ output {
 // input[type="color"]
 
 .form-control {
-  display: block;
+  position: relative;
+  display: inline-block;
+  appearance: none;
   width: 100%;
   height: @input-height; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
   padding: @padding-base-vertical @padding-base-horizontal;
   font-size: @font-size-base;
   line-height: @line-height-base;
   color: @input-color;
-  background-color: @input-bg;
+  background-color: @input-fill;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 1px solid @input-border;
+  border: @input-border;
   border-radius: @input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+  box-sizing: border-box;
+  outline: none;
+  transition: @border-transition-base;
   // .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
   .transition(~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
 
@@ -171,17 +176,7 @@ output {
 }
 
 input.form-control {
-  position: relative;
-  display: inline-block;
-  appearance: none;
-  background-color: @input-fill;
-  background-image: none;
-  border-radius: @input-border-radius;
-  border: @input-border;
-  box-sizing: border-box;
-  outline: none;
   padding: 3px 10px;
-  transition: @border-transition-base;
 
   &::placeholder {
     color: @input-placeholder-color;
@@ -194,7 +189,23 @@ input.form-control {
     border-color: @input-focus-border;
   }
 }
+textarea.form-control {
+  resize: vertical;
+  vertical-align: bottom;
+  padding: 5px 7px;
+  line-height: 1.5;
 
+  &::placeholder {
+    color: @input-placeholder-color;
+  }
+  &:hover {
+    border-color: @input-hover-border;
+  }
+  &:focus {
+    outline: none;
+    border-color: @input-focus-border;
+  }
+}
 
 // Search inputs in iOS
 //

@@ -76,7 +76,7 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  .tab-focus();
+  // .tab-focus();
 }
 
 // Adjust output element
@@ -211,6 +211,25 @@ select.form-control {
 
   &:hover {
     border-color: @select-border-color-hover;
+  }
+}
+.input-group {
+  line-height: normal;
+  display: inline-table;
+  width: 100%;
+  border-collapse: separate;
+
+  & .input-group-addon {
+    background-color: @color-dark-white;
+    color: @color-light-silver;
+    vertical-align: middle;
+    display: table-cell;
+    position: relative;
+    border: @border-base;
+    border-radius: @input-border-radius;
+    padding: 0 10px;
+    width: 1px;
+    white-space: nowrap;
   }
 }
 

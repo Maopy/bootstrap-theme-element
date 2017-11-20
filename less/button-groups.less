@@ -8,15 +8,21 @@
   position: relative;
   display: inline-block;
   vertical-align: middle; // match .btn alignment given font-size hack above
+  cursor: pointer;
+
   > .btn {
     position: relative;
     float: left;
+    transition: @all-transition;
     // Bring the "active" button to the front
     &:hover,
     &:focus,
     &:active,
     &.active {
       z-index: 2;
+    }
+    &:hover {
+      border-color: @button-default-border;
     }
   }
 }

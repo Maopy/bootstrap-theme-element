@@ -22,7 +22,7 @@
 
 @color-secondary: color(@color-primary, s(99%) l(*0.9));
 @color-white: #fff;
-@color-dark-white: color(@color-white, blend(@color-primary 2%));
+@color-dark-white: #fbfdff;
 @color-black: #000;
 
 @color-base-black: #1f2d3d;
@@ -39,8 +39,8 @@
 
 /* Link
 -------------------------- */
-@link-color: var(@color-extra-light-black);
-@link-hover-color: var(@color-primary);
+@link-color: @color-extra-light-black;
+@link-hover-color: @color-primary;
 
 /* Border
 -------------------------- */
@@ -166,7 +166,7 @@
 @select-tag-color: var(@color-white);
 @select-tag-background: var(@color-primary);
 
-@select-option-color: var(@link-color);
+@select-option-color: link-color;
 @select-option-disabled-color: var(@color-extra-light-silver);
 @select-option-disabled-background: var(@color-white);
 @select-option-height: 36px;
@@ -209,7 +209,7 @@
 @msgbox-border-radius: 3px;
 @msgbox-font-size: 16px;
 @msgbox-content-font-size: 14px;
-@msgbox-content-color: var(@link-color);
+@msgbox-content-color: link-color;
 @msgbox-error-font-size: 12px;
 
 @msgbox-success-color: var(@color-success);
@@ -425,7 +425,7 @@
 -------------------------- */
 @pagination-font-size: 13px;
 @pagination-fill: var(@color-white);
-@pagination-color: var(@link-color);
+@pagination-color: link-color;
 @pagination-border-radius: 2px;
 @pagination-button-color: var(@color-light-silver);
 @pagination-button-size: 28px;
@@ -465,7 +465,7 @@
 
 @tag-gray-fill: var(@color-light-gray);
 @tag-gray-border: var(@color-light-gray);
-@tag-gray-color: var(@link-color);
+@tag-gray-color: link-color;
 
 // @tag-primary-fill: rgba(@color-primary, 0.10);
 // @tag-primary-border: rgba(@color-primary, 0.20);
@@ -487,7 +487,7 @@
 -------------------------- */
 @dropdown-menu-box-shadow: var(@box-shadow-dark);
 @dropdown-menuItem-hover-fill: var(@color-light-gray);
-@dropdown-menuItem-hover-color: var(@link-color);
+@dropdown-menuItem-hover-color: link-color;
 
 /* Badge
 -------------------------- */
@@ -526,13 +526,13 @@
 
 /* Menu
 --------------------------*/
-@menu-item-color: var(@link-color);
+@menu-item-color: link-color;
 @menu-item-fill: var(@color-extra-light-gray);
 @menu-item-hover-fill: var(@disabled-border-base);
 
-@dark-menu-item-color: var(@link-color);
+@dark-menu-item-color: link-color;
 @dark-menu-item-fill: var(@color-light-black);
-@dark-menu-item-hover-fill: var(@link-color);
+@dark-menu-item-hover-fill: link-color;
 
 /* Rate
 --------------------------*/
@@ -544,7 +544,7 @@
 
 /* DatePicker
 --------------------------*/
-@datepicker-color: var(@link-color);
+@datepicker-color: link-color;
 @datepicker-off-color: #ddd;
 @datepicker-header-color: var(@border-color-hover);
 @datepicker-icon-color: var(@color-light-silver);
@@ -639,10 +639,6 @@
 //** Global text color on `<body>`.
 @text-color:            @color-base-black;
 
-//** Global textual link color.
-@link-color:            @brand-primary;
-//** Link hover color set via `darken()` function.
-@link-hover-color:      tint(@link-color, 20%);
 //** Link hover decoration.
 @link-hover-decoration: none;
 

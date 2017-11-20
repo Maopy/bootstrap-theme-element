@@ -29,11 +29,11 @@
 @color-light-black: color(@color-base-black, h(+5) s(27%) l(27%));
 @color-extra-light-black: #48576a;
 
-@color-base-silver: color(@color-base-black, h(+3) s(16%) l(58%));
-@color-light-silver: color(@color-base-black, h(+3) s(23%) l(67%));
-@color-extra-light-silver: color(@color-base-black, s(26%) l(80%));
+@color-base-silver: #8391a5;
+@color-light-silver: #97a8be;
+@color-extra-light-silver: #bfcbd9;
 
-@color-base-gray: color(@color-base-black, s(28%) l(86%));
+@color-base-gray: #d1dbe5;
 @color-light-gray: color(@color-base-black, h(+10) s(33%) l(92%));
 @color-extra-light-gray: #eef1f6;
 
@@ -80,9 +80,9 @@
 
 /* Disable base
 -------------------------- */
-@disabled-fill-base: var(@color-extra-light-gray);
+@disabled-fill-base: @color-extra-light-gray;
 @disabled-color-base: #bbb;
-@disabled-border-base: var(@color-base-gray);
+@disabled-border-base: @color-base-gray;
 
 /* Icon
 -------------------------- */
@@ -256,26 +256,25 @@
 @input-color: var(@font-color-base);
 @input-width: 140px;
 @input-height: 36px;
-@input-border: var(@border-base);
+@input-border: @border-base;
 @input-border-color: var(@border-color-base);
-@input-border-radius: var(@border-radius-base);
-@input-border-color-hover: var(@border-color-hover);
-@input-fill: var(@color-white);
+@input-border-radius: @border-radius-base;
+@input-border-color-hover: @border-color-hover;
+@input-fill: @color-white;
 @input-fill-disabled: var(@disabled-fill-base);
 @input-color-disabled: var(@font-color-disabled-base);
 @input-icon-color: var(@color-extra-light-silver);
-@input-placeholder-color: var(@color-light-silver);
+@input-placeholder-color: @color-light-silver;
 @input-max-width: 314px;
 
-@input-hover-border: var(@border-color-hover);
-
-@input-focus-border: var(@color-primary);
+@input-hover-border: @border-color-hover;
+@input-focus-border: @color-primary;
 @input-focus-fill: var(@color-white);
 
-@input-disabled-fill: var(@disabled-fill-base);
-@input-disabled-border: var(@disabled-border-base);
-@input-disabled-color: var(@disabled-color-base);
-@input-disabled-placeholder-color: var(@color-extra-light-silver);
+@input-disabled-fill: @disabled-fill-base;
+@input-disabled-border: @disabled-border-base;
+@input-disabled-color: @disabled-color-base;
+@input-disabled-placeholder-color: @color-extra-light-silver;
 
 @input-large-font-size: 16px;
 @input-large-height: 42px;
@@ -797,19 +796,19 @@
 //** Text color for `<input>`s
 @input-color:                    @gray;
 //** `<input>` border color
-@input-border:                   #ccc;
+// @input-border:                   #ccc;
 
 // TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
 //** Default `.form-control` border radius
 // This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
-@input-border-radius:            @border-radius-base;
+// @input-border-radius:            @border-radius-base;
 //** Large `.form-control` border radius
 @input-border-radius-large:      @border-radius-large;
 //** Small `.form-control` border radius
 @input-border-radius-small:      @border-radius-small;
 
 //** Border color for inputs on focus
-@input-border-focus:             #66afe9;
+// @input-border-focus:             #66afe9;
 
 //** Placeholder text color
 @input-color-placeholder:        #999;

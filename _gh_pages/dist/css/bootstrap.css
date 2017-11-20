@@ -2716,6 +2716,12 @@ textarea.form-control:focus {
   outline: none;
   border-color: #20a0ff;
 }
+select.form-control {
+  cursor: pointer;
+}
+select.form-control:hover {
+  border-color: #8391a5;
+}
 input[type="search"] {
   -webkit-appearance: none;
 }

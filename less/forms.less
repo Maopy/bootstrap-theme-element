@@ -32,8 +32,8 @@ legend {
 label {
   display: inline-block;
   max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
-  margin-bottom: 5px;
-  font-weight: bold;
+  padding-bottom: 10px;
+  color: @color-extra-light-black;
 }
 
 
@@ -472,6 +472,9 @@ input[type="checkbox"] {
 // Heads up! This is mixin-ed into `.navbar-form` in navbars.less.
 
 .form-inline {
+  label {
+    padding-right: 12px;
+  }
 
   // Kick in the inline
   @media (min-width: @screen-sm-min) {
@@ -479,6 +482,7 @@ input[type="checkbox"] {
     .form-group {
       display: inline-block;
       margin-bottom: 0;
+      margin-right: 10px;
       vertical-align: middle;
     }
 

@@ -4,23 +4,33 @@
 
 
 .breadcrumb {
-  padding: @breadcrumb-padding-vertical @breadcrumb-padding-horizontal;
-  margin-bottom: @line-height-computed;
+  font-size: 13px;
+  line-height: 1;
   list-style: none;
-  background-color: @breadcrumb-bg;
-  border-radius: @border-radius-base;
+  margin: 0;
+  padding: 0;
 
   > li {
     display: inline-block;
 
     + li:before {
       content: "@{breadcrumb-separator}\00a0"; // Unicode space added since inline-block means non-collapsing white-space
-      padding: 0 5px;
-      color: @breadcrumb-color;
+      margin: 0 8px;
+      color: @color-extra-light-silver;
+    }
+
+    & a {
+      color: @color-extra-light-black;
+      transition: color .15s linear;
+
+      &:hover {
+        color: @color-primary;
+        cursor: pointer;
+      }
     }
   }
 
   > .active {
-    color: @breadcrumb-active-color;
+    color: @color-light-silver;
   }
 }

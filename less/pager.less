@@ -15,15 +15,15 @@
     > span {
       display: inline-block;
       padding: 5px 14px;
-      background-color: @pager-bg;
-      border: 1px solid @pager-border;
+      background-color: @pagination-fill;
+      border: 1px solid @pagination-border-color;
       border-radius: @pager-border-radius;
     }
 
     > a:hover,
     > a:focus {
       text-decoration: none;
-      background-color: @pager-hover-bg;
+      background-color: @pagination-fill;
     }
   }
 
@@ -46,8 +46,8 @@
     > a:hover,
     > a:focus,
     > span {
-      color: @pager-disabled-color;
-      background-color: @pager-bg;
+      // color: @pager-disabled-color;
+      background-color: @pagination-fill;
       cursor: @cursor-disabled;
     }
   }

@@ -4765,92 +4765,104 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #444;
 }
 .breadcrumb {
-  padding: 8px 15px;
-  margin-bottom: 20px;
+  font-size: 13px;
+  line-height: 1;
   list-style: none;
-  background-color: #f5f5f5;
-  border-radius: 4px;
+  margin: 0;
+  padding: 0;
 }
 .breadcrumb > li {
   display: inline-block;
 }
 .breadcrumb > li + li:before {
   content: "/\00a0";
-  padding: 0 5px;
-  color: #ccc;
+  margin: 0 8px;
+  color: #bfcbd9;
+}
+.breadcrumb > li a {
+  color: #48576a;
+  transition: color .15s linear;
+}
+.breadcrumb > li a:hover {
+  color: #20a0ff;
+  cursor: pointer;
 }
 .breadcrumb > .active {
-  color: #777777;
+  color: #97a8be;
 }
 .pagination {
+  white-space: nowrap;
+  padding: 2px 5px;
+  color: link-color;
+  user-select: none;
+  list-style: none;
   display: inline-block;
-  padding-left: 0;
-  margin: 20px 0;
-  border-radius: 4px;
+  vertical-align: top;
+  font-size: 0;
+  padding: 0;
+  margin: 0;
 }
 .pagination > li {
-  display: inline;
+  padding: 0 4px;
+  display: inline-block;
+  vertical-align: top;
+  min-width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border: 1px solid #d1dbe5;
+  border-right: 0;
+  margin: 0;
+  text-align: center;
+  box-sizing: border-box;
 }
 .pagination > li > a,
 .pagination > li > span {
-  position: relative;
-  float: left;
-  padding: 10px 15px;
-  line-height: 1.42857143;
-  text-decoration: none;
-  color: #48576a;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  margin-left: -1px;
+  font-size: 13px;
+  cursor: pointer;
 }
-.pagination > li:first-child > a,
-.pagination > li:first-child > span {
-  margin-left: 0;
+.pagination > li:first-child {
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
+  color: #97a8be;
 }
-.pagination > li:last-child > a,
-.pagination > li:last-child > span {
+.pagination > li:last-child {
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
+  border-right: 1px solid #d1dbe5;
+  color: #97a8be;
 }
-.pagination > li > a:hover,
-.pagination > li > span:hover,
-.pagination > li > a:focus,
-.pagination > li > span:focus {
+.pagination > li:hover,
+.pagination > li:focus {
   z-index: 2;
-  color: #20a0ff;
-  background-color: #eeeeee;
-  border-color: #ddd;
-}
-.pagination > .active > a,
-.pagination > .active > span,
-.pagination > .active > a:hover,
-.pagination > .active > span:hover,
-.pagination > .active > a:focus,
-.pagination > .active > span:focus {
-  z-index: 3;
   color: #fff;
-  background-color: #20a0ff;
+}
+.pagination > li.active {
   border-color: #20a0ff;
+  background-color: #20a0ff;
+}
+.pagination > li.active > a {
+  color: #fff;
   cursor: default;
 }
-.pagination > .disabled > span,
-.pagination > .disabled > span:hover,
-.pagination > .disabled > span:focus,
+.pagination > .disabled {
+  cursor: not-allowed;
+}
 .pagination > .disabled > a,
+.pagination > .disabled > span,
 .pagination > .disabled > a:hover,
 .pagination > .disabled > a:focus {
-  color: #777777;
+  color: #e4e4e4;
   background-color: #fff;
-  border-color: #ddd;
   cursor: not-allowed;
+}
+.pagination-lg > li {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
 }
 .pagination-lg > li > a,
 .pagination-lg > li > span {
-  padding: 11px 19px;
   font-size: 16px;
-  line-height: 1;
 }
 .pagination-lg > li:first-child > a,
 .pagination-lg > li:first-child > span {
@@ -4862,11 +4874,14 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   border-bottom-right-radius: 6px;
   border-top-right-radius: 6px;
 }
+.pagination-sm > li {
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+}
 .pagination-sm > li > a,
 .pagination-sm > li > span {
-  padding: 7px 9px;
   font-size: 12px;
-  line-height: 1;
 }
 .pagination-sm > li:first-child > a,
 .pagination-sm > li:first-child > span {
@@ -4892,13 +4907,13 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   display: inline-block;
   padding: 5px 14px;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #d1dbe5;
   border-radius: 15px;
 }
 .pager li > a:hover,
 .pager li > a:focus {
   text-decoration: none;
-  background-color: #eeeeee;
+  background-color: #fff;
 }
 .pager .next > a,
 .pager .next > span {
@@ -4912,7 +4927,6 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pager .disabled > a:hover,
 .pager .disabled > a:focus,
 .pager .disabled > span {
-  color: #777777;
   background-color: #fff;
   cursor: not-allowed;
 }
